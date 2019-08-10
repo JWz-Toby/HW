@@ -1,0 +1,74 @@
+<html>
+<head>
+<h1>Order here</h1>
+<script>
+function getData()
+{var ret1,ret2;
+var v1;
+ret1=document.getElementById("g1").checked;
+ret2=document.getElementById("g2").checked;
+
+if(ret1==true)
+{v1=document.getElementById("g1").value;
+}
+else if(ret2==true)
+{v1=document.getElementById("g2").value;
+}
+alert(v1)
+var ret3,ret4,ret5; 
+var v2;
+ret3=document.getElementById("Ice1").checked;
+ret4=document.getElementById("Ice2").checked;
+ret5=document.getElementById("Ice3").checked;
+if(ret3==true)
+{v2=document.getElementById("Ice1").value;
+}
+else if(ret4==true)
+{v2=document.getElementById("Ice2").value;
+}
+else(ret5==true)
+{v2=document.getElementById("Ice3").value;
+}
+alert(v2);
+var myObj={"name":"","TEL":"","address":"","SIZE":"","ICE":""}
+myObj.name = document.getElementById("name").value;
+myObj.TEL = document.getElementById("TEL").value;
+myObj.address = document.getElementById("address").value;
+myObj.SIZE = v1;
+myObj.ICE = v2;
+var myJSONstr=JSON.stringify(myObj);
+alert(myJSONstr);
+
+}
+</script>
+</head>
+<body>
+
+<br>
+Name (姓名) : <input id="name" type="text" name="name" size="8"><br>
+<br>
+TEL (電話) : <input id="TEL" type="text" name="TEL" size="15"><br>
+<br>
+Address (住址) : <input id="address" type="text" name="address" size="35"><br>
+<br>
+SIZE (尺寸) :
+<input id="g1" type="radio" name="size" value="Medium(中杯)">Medium (中杯)
+<input id="g2" type="radio" name="size" value="Large+20(大杯加20)">Large+20 (大杯加20)
+<br>
+<br>
+ICE (冰度) : 
+<input id="Ice1" type="radio" name="temperature" value="Regular Ice(正常冰)">Regular Ice (正常冰)
+<input id="Ice2" type="radio" name="temperature" value="Less Ice(少冰)">Less Ice (少冰)
+<input id="Ice3" type="radio" name="temperature" value="Ice-Free(去冰)">Ice-Free (去冰)
+<br>
+<br>
+<button onclick="getData()" style="height:25px;width:300px"> saveDrinkData (保存飲料數據) </button>
+
+
+
+
+</body>
+
+
+
+</html>
