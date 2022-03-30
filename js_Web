@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+     <head>
+          <style type="text/css">
+            body{
+                margin: 0px;
+            }
+            header{
+                background-color: cornflowerblue;
+                text-align: center;
+                vertical-align:middle ;
+                line-height:50px;
+                font-size: 12px;
+                color:white;
+                box-shadow:1px 1px 2px 2px rgb(151, 150, 150);
+            }
+            .box{
+                width:519px;
+                height:380px;
+                border-top:0px;
+                border-right:1px solid rgb(204, 203, 203);
+                border-left:1px solid rgb(204, 203, 203);
+                border-bottom:1px solid rgb(204, 203, 203);
+                border-radius:0px 0px 5px 5px;
+                position: relative;
+                text-align: center;
+                margin-top: 0px;
+                margin-right:auto;
+                margin-left: auto;
+            }
+            div{
+                margin: 0px;
+            }
+            h3{
+                margin-left:-380px;
+                margin-top:25px;
+                font-size: 14px;
+            }
+            p{
+              font-size: 14px;
+              font-weight: bolder;
+            }
+            #day{
+              color:red;
+              font-size: 35px;
+            }
+            #hr{
+              color:red;
+              font-size: 35px;
+            }
+            #min{
+              color:red;
+              font-size: 35px;
+            }
+            #sec{
+              color:red;
+              font-size: 35px;
+            }
+            footer{
+                background-color: cornflowerblue;
+                border-radius:0px 0px 5px 5px;
+                text-align:end;
+                vertical-align:middle ;
+                line-height:25px;
+                width:520px;
+                font-size: 8px;
+                color:white;
+                margin-top: 210px;
+                margin-right:auto;
+                margin-left: auto;
+            }
+          </style>
+     </head>
+     <body>
+          <header>倒數計時器</header>
+          <div class="box">
+            <br><h3>&nbsp&nbsp&nbsp距離下學期結束</h3><br>
+            <p>還有<span id="day"></span>天<span id="hr"></span>小時<span id="min"></span>分<span id="sec"></span>秒</p>
+          <footer>大家加油!&nbsp&nbsp&nbsp&nbsp&nbsp</footer>
+          </div>
+          <script>
+            var countdown=function(deadline) //到期日
+            {
+                var now=new Date(); //當下的時間
+                var rest=(deadline.getTime()-now.getTime())/1000; //還剩多少時間
+                if(rest<=0)
+                {
+                  var sec=0;
+                  var min=0;
+                  var hr=0;
+                  var day=0;
+                }
+                else
+                {
+                var sec=Math.floor(rest%60);
+                var min=Math.floor((rest/60)%60);
+                var hr=Math.floor((rest/60/60)%24);
+                var day=Math.floor(rest/60/60/24);
+                }
+                var all=[day,hr,min,sec];
+                return all;
+            }
+
+            var goal=new Date(2022,6,17); //月份從0開始算起
+           
+            var recall=function()
+            {
+                var counter=countdown(goal);
+                document.getElementById('day').textContent=counter[0];
+                document.getElementById('hr').textContent=counter[1];
+                document.getElementById('min').textContent=counter[2];
+                document.getElementById('sec').textContent=counter[3];
+                update();//更新
+            }
+
+            var update=function()
+            {
+                setTimeout(recall,1000);//等待1000毫秒再執行
+            }
+            recall();
+          </script>
+     </body>
+<html>
