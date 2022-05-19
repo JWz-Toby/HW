@@ -1,48 +1,272 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+
+<html>
+
+   <head>
+        <style type="text/css">
+		 body{
+		    background-color:#000000;
+		 }
+		
+		 header{
+			text-align:center;
+		 }
+		
+		 table{
+            margin:0px 160px auto;
+			border-collapse:collapse;
+
+		 }
+		 
+		 h1{
+		    font-family:"標楷體";
+		    font-weight:bold;
+			font-size:35px;
+		    color:white;
+			text-shadow:1px 1px 2px #FFD306;
+		 }
+		 
+		 a{
+            color:white;
+			font-size:20px;		 
+		 }
+		 
+		 a:link{
+			border:0px;
+			text-decoration: none;
+		 } 
+		 
+		 a:hover{
+		    font-family:"標楷體";
+		    color:black;
+			background-color:white;
+			text-decoration: none;
+		 }
+		 
+		 #img_all{
+		    width:520px;
+			height:380px;
+		 }
+		 
+		 .img_right{
+		    width:60%;
+			margin:10px 10px;
+            float:right;			
+		 }
+		 .img_left{
+		    width:60%;
+			margin:10px 10px;
+            float:left;		 
+		 }
+
+		 #p_title{
+		      width:585px;
+		      height:250px;
+			  background-color:#000000;
+			  text-align:center;
+		 }
+         
+		 .bgcolor{
+		      background-color:#FFE153;
+		 }
+		 
+         .word{
+		      font-family:"標楷體";
+			  font-size:28px;
+			  color:#0080FF;
+			  text-align:center;
+		 }
+		 
+		 #page{
+		      font-family:"標楷體";
+			  color:#0080FF;
+		 }
+		 
+		 #art{
+		      color:black;
+			  background-color:#FFE153;
+		 }
+		 
+		 #road{
+		      color:black;
+			  background-color:#FFE153;
+		 }
+		 
+		 #trees{
+		      font-family:"標楷體";
+			  font-size:20px;
+			  color:#0080FF;
+		 }
+		 
+		 #museums{
+		      font-family:"標楷體";
+			  font-size:20px;
+			  color:#0080FF;
+		 }
+		 
+		 .words{
+		      font-family:"標楷體";
+			  font-size:20px;
+			  color:#000000;
+		 }
+		 
+		 nav{
+              font-family:"標楷體";
+			  font-size:18px;
+			  text-align:center;
+		 }
+
+		 .reference{
+		      font-family:"標楷體";
+			  font-size:18px;
+			  color:#BEBEBE;
+			  text-align:center;
+		 }
+
+		</style>
+   </head>
    
-  <script src="setting.js"></script>
-  <script src="Cookie.js"></script> 
-  <script src="HTTP2019.js"></script>
- <script>
-
-
-
-</script>	
-	
-</head>
-<body style="height: 780px">
-    名字:
-    <input type="text" name="pateintName" value="Mickey" id="name"/> &nbsp;
-    FHIR patient id:
-    <input type="text"  value="unknown" id="FHIRPtionID"/>  <br/>
-    <h2>FHIR 健康紀錄輸入範例</h2>
-    <h2>問題健康狀況</h2>
-     <ul>
-      <li><a href="postCondition.html"> 哮喘</a></li>
-      
-     </ul>
-     <h2>生理量測</h2>
-     <ul>
-       <li><a href="postTemperature.html"> 新增體溫</a></li>
-      </ul>
-     <h2>問卷</h2>
-     <ul>
-      
-      <li><a href="postADL.html"> ADL 問卷</a></li>
-      <li><a href="postADL2.html">ADL 問卷(較高階程式寫法)</a></li>
-     </ul>
-
+   <body>
+     <header>
+   	  <h1 id="top">宜蘭景點</h1>
+	    <nav>
+		   <a href="#page">  | 登入 |</a>
+		   <a href="#art">  | 註冊 |</a>
+		   <a href="#tree">  | 確認者足跡 |</a>
+		   <a href="#road">  | 地區篩檢站 |</a>
+		   <a href="#museum">  | 其他 |</a>
+	    </nav>
+		<hr></hr>
+	 </header>
+	 
+	 <article>
+        <table class="style">
+			<tr>
+			   <td id="page" class="word">認識宜蘭</td>
+			</tr>
+			<tr>
+			   <td id="p_title">
+			       <iframe width="560" height="315" src="https://www.youtube.com/embed/33rUs9-DmdY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			   </td>
+			</tr>
+			<tr>
+			   <td>
+			      <nav>
+				     <a href="#top" id="page">回到本頁開頭</a>
+			      </nav>
+			   </td>
+			</tr>
+			
+			<tr>
+			   <td id="art" class="word">傳統藝術中心</td>
+			</tr>
+			<tr>
+			   <td class="bgcolor">
+			      <img id="img_all" class="img_right" src="http://www.px-sunmake.org.tw/assets/images/neighborhood/wenchung2.jpg">
+				  <font class="words">
+				  文昌街景依據臺灣新竹湖口、三峽、鹿港、臺北大稻埕等各地街屋特色設計而成，宜蘭傳藝園區為展現臺灣傳統聚落氛圍，透過市集、街景及傳統店家等元素來呈現傳統聚落食衣住行生活環境。
+				  清代傳統老街主要以傳統閩南建築為主，前店後廠，二樓空間作為居住與儲存空間。
+				  其中閩南老街建築，通常將二樓前方作為儲存空間，透過建築的橫樑運送貨品。
+				  日治時期日本人為了提升居住環境，在明治末期到昭和年間，開始進行街道改正計劃，進行街道調整。
+				  此時日本明治維新從歐洲學習很多知識及建築風格，如文藝復興時期的巴洛克與後來昭和年代的現代主義等風格。
+				  巴洛克式建築有繁複的裝飾，諸如有希臘山牆，女兒牆，透過堆灰、剪粘、交趾陶等作裝飾。
+				  文昌街建築也包含日治時期昭和年間現代主義的建築特色，洗石子工法加上簡約線條，搭配幾何圖形，與巴洛克式風格截然不同。
+				  街道立面仿女兒牆與山牆的樣式，帶出日治西洋建築風格，閩南傳統街屋交置其中，立面裝飾則為交趾陶朱義成老師所製。
+				  文昌街也呈現傳統街屋建築頭尾不見的特色，這樣的建築方式除了符合漢人風水藏風聚氣觀念、防火消防功能外，也具備防盜功能，讓盜賊不曉得彎巷有哪些防盜措施。
+				  </font>
+			   </td>
+			</tr>
+			<tr>
+			   <td class="bgcolor">
+			      <nav>
+				     <a href="#top">回到本頁開頭</a>
+			      </nav>
+			   </td>
+			</tr>
+			
+			<tr>
+			   <td id="tree" class="word">落雨松秘境</td>
+			</tr>
+			<tr>
+			   <td>
+			      <img id="img_all" class="img_left" src="https://img.ltn.com.tw/Upload/news/600/2019/01/07/255.jpg">
+				  <font id="trees">
+				  有「宜蘭小歐洲」的美譽的落羽松秘境，就位於三星鄉安農溪畔，找個好天氣的午後來此，坐於溪畔欣賞落羽松、在草地上野餐感受微風吹拂的愜意、騎腳踏車或漫步於落羽松之間享受秋天悠閒的午後時光，建議也到對岸欣賞山巒、溪流、落羽松所繪成的優美山水景致。
+				  在河堤邊就能看到漂亮的落羽松林，汽車可以停在右邊道路上，左手邊為腳踏車道，會有這整排的落羽松，是因三星鄉公所為防風護岸，在民國80年代在此栽植約200株落羽松，就形成了這綿延500米的林蔭大道。每逢秋冬之際，綠葉翻紅，增添了異國情調，而這片祕境也因此搏得「宜蘭小歐洲」的美譽。
+				  建議最佳觀賞時間為每年12月至1月，找個好天氣在下午2-3點左右來此拍落羽松，除了天空美之外，更重要是有陽光投射，適合情人一同來此走走、三五好友一同跳拍，也可以在兩排落羽松中間的綠草地上野餐，享受微風吹拂的愜意及美好的午後時光。
+				  </font>
+			   </td>
+			</tr>
+			<tr>
+			   <td>
+			      <nav>
+				     <a href="#top" id="tree">回到本頁開頭</a>
+			      </nav>
+			   </td>
+			</tr>
+			
+			<tr>
+			   <td id="road" class="word">伯朗大道</td>
+			</tr>
+			<tr>
+			   <td class="bgcolor">
+			      <img id="img_all" class="img_right" src="https://img.kafkalin.com/uploads/20180617210451_95.jpg">
+				  <font class="words">
+				  稻間美徑（原稱三奇伯朗大道），位在宜蘭冬山，兩旁是一望無際的稻田，大地上以花蓮23號彩稻在大地上種出八個字「幸福冬山，糧食大道」的可食地景。
+				  5月至6月水稻結穗期，可站上10公尺的高台，欣賞的絕美景色，登高望遠，心情也豁然開朗，今年更引進飛牛牧場、全聯福利中心的福利熊，及天際航空共三顆熱氣球，讓金黃稻田美景盡收眼底。
+				  來找回那條回到童年回憶的鄉間小徑，貼近土地，一路往北走，朝著紅色的利澤簡橋方向，尋訪美麗冬山河聞聞稻香與泥土的芬芳，和自己所愛的台灣土地。
+			      </font>
+			   </td>
+			</tr>
+			<tr>
+			   <td class="bgcolor">
+			      <nav>
+				     <a href="#top">回到本頁開頭</a>
+			      </nav>
+			   </td>
+			</tr>
+			
+			<tr>
+			   <td id="museum" class="word">蘭陽博物館</td>
+			</tr>
+			<tr>
+			   <td>
+			      <img id="img_all" class="img_left" src="https://mk0newsmarketlxfg8j2.kinstacdn.com/files/2019/04/%E8%98%AD%E9%99%BD%E5%8D%9A%E7%89%A9%E9%A4%A8uFF0F%E6%94%9D%E5%BD%B1%E8%80%85%E9%BB%83%E9%95%B7%E5%AF%8C.jpg">
+				  <font id="museums">
+				  蘭陽博物館是一座與大地共生的建築，建築主體建造在烏石港礁遺址的西北側，以便完整保留濕地的自然生態，因特殊的建築外觀，成為宜蘭的著名地標。
+				  主建築物融入北關海岸一帶常見的單面山的形體。也為了呈現蘭陽平原四季的田野色調，以韋瓦第的四季主旋律做為發想，外牆採用有質感的石材，做排列組合，仿造單面山的岩石紋理，並隨著四季與天色的光影變化而有不同的色調。
+				  走在蘭陽博物館的走道上，抬頭看見館徽，館徽以葛瑪蘭族的傳統木刻人形圖案為設計理念，表達著「人和自然的和諧共生」及「人與歷史的聯想」。在館內常設展主題結合建築特色，由上而下分別設立山之層、平原層、海之層、時光廊，藉由這些展覽來表現宜蘭的地理環境、人文歷史以及豐富的自然生態。
+			      </font>
+			   </td>
+			</tr>
+			<tr>
+			   <td>
+			      <nav>
+				     <a href="#top" id="museum">回到本頁開頭</a>
+			      </nav>
+			   </td>
+			</tr>
+		</table>
+	 </article>
    
-  
-  
-</body>
-<script >
-    document.getElementById("FHIRPtionID").value = getCookie("patientID");
-    document.getElementById("name").value = getCookie("patientName");
+     <footer class="reference">
+	    <hr></hr>
+			  <div>
+			      參考資料:<br/>
+				  https://www.flickr.com/photos/sea-blue/27517684160<br/>
+				  http://www.px-sunmake.org.tw/assets/images/neighborhood/wenchung1.jpg<br/>
+				  http://www.px-sunmake.org.tw/navigate/neighborhood.html<br/>
+				  https://news.ltn.com.tw/news/focus/paper/1259545自由時報<br/>
+				  https://kafkalin.com/samsungluoyusong/卡夫卡愛旅行<br/>
+				  https://kafkalin.com/daojian/卡夫卡愛旅行<br/>
+				  https://www.newsmarket.com.tw/blog/118429/<br/>
+				  https://travel.yilan.tw/zh-tw/attraction/details/321宜蘭勁好玩<br/>
+				  --本網頁為作業之用，如有侵權敬請告知--
+				  <nav>
+				     <a href="#top" id="page">回到本頁開頭</a>
+			      </nav>
+			  </div>
+	 </footer>
+   
+   </body>
 
-</script>
 </html>
